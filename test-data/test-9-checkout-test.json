@@ -1,0 +1,21 @@
+[
+    {
+        "testName": "TEST 9 - End-to-End Purchase Flow",
+        "input": {
+            "bookTitle": "JavaScript for Web Developers",
+            "email": "vllaaddd@dayz.com",
+            "password": "pass123",
+            "userName": "Vladimir",
+            "address": "Chernarus BB",
+            "cardHolderName": "Vladimir",
+            "cardNumber": "4242424242424242",
+            "cardExpirationMonth": "10",
+            "cardExpirationYear": "2030",
+            "cardCvc": "321"
+        },
+        "expectedOutput": {
+            "purchaseSuccessMessage": "Your purchase was successful!",
+            "bookInPastOrders": "JavaScript for Web Developers"
+        }
+    }
+]

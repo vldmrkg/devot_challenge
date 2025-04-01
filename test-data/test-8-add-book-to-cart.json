@@ -1,0 +1,11 @@
+[
+    {
+        "testName": "TEST 8 - Add book to the cart",
+        "input": {
+            "bookTitle": "JavaScript for Web Developers"
+        },
+        "expectedOutput": {
+            "cartMessage": "JavaScript for Web Developers is in the cart"
+        }
+    }
+]

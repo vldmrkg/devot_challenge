@@ -1,0 +1,32 @@
+[
+    {
+        "testName": "TEST 1 - Sign in with valid credentials",
+        "input": {
+            "email": "vllaaddd@dayz.com",
+            "password": "pass123"
+        },
+        "expectedOutput": {
+            "expectedMessage": "Hello Vladimir"
+        }
+    },
+    {
+        "testName": "TEST 2 - Sign in with invalid password",
+        "input": {
+            "email": "vllaaddd@dayz.com",
+            "password": "pass12344"
+        },
+        "expectedOutput": {
+            "expectedMessage": "Incorrect password"
+        }
+    },
+    {
+        "testName": "TEST 3 - Sign in with invalid email",
+        "input": {
+            "email": "chearnarus@dayz.com",
+            "password": "pass123"
+        },
+        "expectedOutput": {
+            "expectedMessage": "No user found with the given email address"
+        }
+    }
+]

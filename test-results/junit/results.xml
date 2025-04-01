@@ -1,0 +1,6 @@
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="5.014358000000008">
+<testsuite name="test-6-sign-in-user.spec.ts" timestamp="2025-04-01T14:06:33.760Z" hostname="chromium" tests="1" failures="0" skipped="0" time="3.491" errors="0">
+<testcase name="User Authentication Tests › TEST 1 - Sign in with valid credentials" classname="test-6-sign-in-user.spec.ts" time="3.491">
+</testcase>
+</testsuite>
+</testsuites>

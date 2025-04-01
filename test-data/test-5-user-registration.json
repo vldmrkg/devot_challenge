@@ -1,0 +1,26 @@
+[
+  {
+    "testName": "TEST 5 - Sign Up and verify new user with valid data",
+    "input": {
+      "userName": "Vladimir",
+      "email": "{{EMAIL}}",  
+      "password": "pass123",
+      "confirmPassword": "pass123"
+    },
+    "expectedOutput": {
+      "expectedUser": "Vladimir"
+    }
+  },
+  {
+    "testName": "TEST 6 - Sign Up and verify error message for invalid email",
+    "input": {
+      "userName": "Vladimir",
+      "email": "vlaaddayz.com",
+      "password": "pass123",
+      "confirmPassword": "pass123"
+    },
+    "expectedOutput": {
+      "expectedError": "Invalid email"
+    }
+  }
+]

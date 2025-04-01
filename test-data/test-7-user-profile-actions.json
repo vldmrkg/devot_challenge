@@ -1,0 +1,22 @@
+[
+    {
+        "testName": "TEST 1 - View past orders after login",
+        "input": {
+            "email": "vllaaddd@dayz.com",
+            "password": "pass123"
+        },
+        "expectedOutput": {
+            "ordersExist": true
+        }
+    },
+    {
+        "testName": "TEST 2 - Test user logout",
+        "input": {
+            "email": "vllaaddd@dayz.com",
+            "password": "pass123"
+        },
+        "expectedOutput": {
+            "userLoggedOut": true
+        }
+    }
+]

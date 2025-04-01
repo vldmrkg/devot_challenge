@@ -1,0 +1,11 @@
+[
+    {
+        "testName": "TEST 2 - Search functionality",
+        "input": {
+            "bookName": "Agile Testing"
+        },
+        "expectedOutput": {
+            "booksFound": true 
+        }
+    }
+]

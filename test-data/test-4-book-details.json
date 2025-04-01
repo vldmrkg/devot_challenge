@@ -1,0 +1,14 @@
+[
+    {
+      "testName": "TEST 4 - Verify book details",
+      "input": {
+        "bookName": "Agile Testing"
+      },
+      "expectedOutput": {
+        "pageTitle": "Book Details",
+        "bookTitle": "Agile Testing",
+        "bookPrice": "56€",
+        "bookDescription": "A Practical Guide for Testers and Agile Teams"
+      }
+    }
+  ]

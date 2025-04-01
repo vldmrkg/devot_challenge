@@ -1,0 +1,22 @@
+[
+    {
+      "testName": "TEST 1 - Sort books by price (ascending)",
+      "input": {
+        "sortOrder": "ASC",
+        "expectedOrder": "ASC"
+      },
+      "expectedOutput": {
+        "isSorted": true
+      }
+    },
+    {
+      "testName": "TEST 2 - Sort books by price (descending)",
+      "input": {
+        "sortOrder": "DESC",
+        "expectedOrder": "DESC"
+      },
+      "expectedOutput": {
+        "isSorted": true
+      }
+    }
+  ]

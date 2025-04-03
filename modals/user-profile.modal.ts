@@ -80,7 +80,7 @@ export class UserProfileModal extends BaseModal {
                 console.info(`- ID: ${order.id}, Book: ${order.bookTitle}, Price: ${order.price}`);
             });
         } else {
-            console.info("Info: No past orders found.");
+            console.error("ERROR: No past orders found.");
         }
 
         const normalizeTitle = (title: string) => title.trim().replace(/\s*\|\s*$/, "").toLowerCase();

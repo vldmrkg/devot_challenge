@@ -1,6 +1,11 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="4.286493999999948">
-<testsuite name="test-6-sign-in-user.spec.ts" timestamp="2025-04-03T16:33:18.120Z" hostname="chromium" tests="1" failures="0" skipped="0" time="2.75" errors="0">
-<testcase name="User Authentication Tests › TEST 1 - Sign in with valid credentials" classname="test-6-sign-in-user.spec.ts" time="2.75">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="10.380831999999995">
+<testsuite name="test-9-checkout.spec.ts" timestamp="2025-04-03T16:46:28.925Z" hostname="chromium" tests="1" failures="0" skipped="0" time="8.559" errors="0">
+<testcase name="TEST 9 - End-to-End Purchase Flow" classname="test-9-checkout.spec.ts" time="8.559">
+<system-out>
+<![CDATA[Info: List of past orders:
+- ID: Order ID: 67eebb6c8ae6220286481214, Book: JavaScript for Web Developers |, Price: 40.00€
+]]>
+</system-out>
 </testcase>
 </testsuite>
 </testsuites>

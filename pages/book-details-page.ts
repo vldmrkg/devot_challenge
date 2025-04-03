@@ -1,4 +1,4 @@
-import { Page } from "@playwright/test";
+import { expect, Page } from "@playwright/test";
 import { BasePage } from "./base-page";
 import { BookDetailsModal } from "../modals/book-details-modal";
 import { step } from "../utils/base";
@@ -14,9 +14,10 @@ export class BookDetailsPage extends BasePage {
 
     @step('Verifying book details page title is "{expectedTitle}"')
     public async verifyBookDetailsPageTitle(expectedTitle: string): Promise<void> {
-        await this.bookDetailsModal.verifyPageTitle(expectedTitle);
+        const actualTitle = await this.bookDetailsModal.getPageTitle();
+        expect(actualTitle).toBe(expectedTitle);
     };
-    
+
     @step("Fetching book title from details page")
     public async fetchBookTitle(): Promise<string> {
         return await this.bookDetailsModal.getBookTitle();
@@ -32,6 +33,6 @@ export class BookDetailsPage extends BasePage {
         return await this.bookDetailsModal.getBookDescription();
     };
 
-    
-    
+
+
 }

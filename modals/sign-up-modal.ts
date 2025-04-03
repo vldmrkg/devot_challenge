@@ -44,9 +44,9 @@ export class SignUpModal extends BaseModal {
     };
 
     
-    public async verifyErrorMessage(expectedMessage: string) {
+    public async getErrorMessage(): Promise<string> {
         await expect(this.errorMessage).toBeVisible();
-        await expect(this.errorMessage).toHaveText(expectedMessage);
+        return (await this.errorMessage.textContent()) ?? ''; 
     };
     
 

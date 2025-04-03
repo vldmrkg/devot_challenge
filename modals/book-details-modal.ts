@@ -40,9 +40,8 @@ export class BookDetailsModal extends BaseModal {
     };
 
     
-    public async verifyPageTitle(expectedTitle: string): Promise<void> {
+    public async getPageTitle(): Promise<string> {
         const pageTitleLocator = this.page.locator('.page-layout .mt-3');
-        const pageTitle = await this.getElementText(pageTitleLocator, "Page title not found.");
-        expect(pageTitle).toBe(expectedTitle);
+        return await this.getElementText(pageTitleLocator, "Page title not found.");
     };
 };

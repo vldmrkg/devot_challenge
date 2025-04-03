@@ -18,8 +18,8 @@ export class BookStorePage extends BasePage {
 
     @step('Adding book "{bookName}" to cart')
     public async addBookToCart(bookName: string): Promise<void> {
-        const bookLocator = await this.bookStoreModal.findBook(bookName); 
-        await this.bookStoreModal.clickAddToCart(bookLocator); 
+        const bookLocator = await this.bookStoreModal.findBook(bookName);
+        await this.bookStoreModal.clickAddToCart(bookLocator);
     };
 
     @step("Fetching list of all available books with their prices")

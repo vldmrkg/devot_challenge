@@ -1,6 +1,8 @@
 import { Page } from "@playwright/test";
 import { step } from "../utils/base";
 
+export const BASE_PATH = '/bookstore';
+
 
 export abstract class BasePage {
   protected page: Page;
@@ -13,7 +15,8 @@ export abstract class BasePage {
 
   @step("Navigating to the bookstore page")
   public async goto() {
-    await this.page.goto("https://practice.expandtesting.com/bookstore");
+    await this.page.goto(BASE_PATH);
+
   };
 
   @step("Logging out the user")

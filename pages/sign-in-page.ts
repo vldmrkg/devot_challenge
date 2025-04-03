@@ -1,4 +1,4 @@
-import { Page } from "@playwright/test";
+import { expect, Page } from "@playwright/test";
 import { BasePage } from "./base-page";
 import { HeaderModal } from "../modals/header-modals";
 import { SignInModal } from "../modals/sign-in-modal";
@@ -11,7 +11,7 @@ export class SignInPage extends BasePage {
     public signInModal: SignInModal;
     public headerModal: HeaderModal;
     public signUpModal: SignUpModal;
-    
+
     constructor(page: Page) {
         super(page);
         this.signInModal = new SignInModal(page, "");
@@ -27,7 +27,8 @@ export class SignInPage extends BasePage {
 
     @step('Verifying sign-in error message "{expectedMessage}"')
     public async verifySignInError(expectedMessage: string) {
-        await this.signUpModal.verifyErrorMessage(expectedMessage);
+        const actualMessage = (await this.signUpModal.getErrorMessage()).trim();
+        expect(actualMessage).toBe(expectedMessage);
     };
 
 

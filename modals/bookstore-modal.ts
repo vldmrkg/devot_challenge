@@ -78,12 +78,14 @@ export class BookStoreModal extends BaseModal {
     };
 
     public async getAllBooks(): Promise<{ title: string; price: string }[]> {
-        const titles = await this.bookTitle.allTextContents();
-        const prices = await this.booksPrice.allTextContents();
-
-        if (titles.length !== prices.length) throw new Error("Mismatch between books and prices.");
-
-        return titles.map((title, index) => ({ title: title.trim(), price: prices[index].trim() }));
+        const titles = (await this.bookTitle.allTextContents()).map(title => title.trim());
+        const prices = (await this.booksPrice.allTextContents()).map(price => price.trim());
+    
+        if (titles.length !== prices.length) {
+            throw new Error(`Mismatch between books (${titles.length}) and prices (${prices.length}).`);
+        }
+    
+        return titles.map((title, index) => ({ title, price: prices[index] }));
     };
 
 

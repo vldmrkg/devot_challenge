@@ -35,4 +35,4 @@ export class BookDetailsPage extends BasePage {
 
 
 
-}
+};

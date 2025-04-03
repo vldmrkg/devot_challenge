@@ -6,6 +6,7 @@ export class ShoppingCartModal extends BaseModal {
     private baseSelector: string;
     private readonly bookRowLocator = this.page.locator(`table tbody tr`);
     private readonly proceedToCheckoutButton = this.page.locator('.p-3 .btn');
+    private readonly bookNameLocator = 'td.information'; 
 
     constructor(page: Page, baseSelector: string) {
         super(page);
@@ -18,7 +19,7 @@ export class ShoppingCartModal extends BaseModal {
         const rowsCount = await this.bookRowLocator.count();
         for (let i = 0; i < rowsCount; i++) {
             const rowLocator = this.bookRowLocator.nth(i);
-            const bookNameText = await rowLocator.locator('td.information').first().textContent();
+            const bookNameText = await rowLocator.locator(this.bookNameLocator).first().textContent();
 
             if (bookNameText?.trim() === bookName) {
                 return;  // Book found, exit function

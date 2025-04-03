@@ -36,12 +36,8 @@ export class SignInModal extends BaseModal {
         await this.signUpLink.click();
     };
 
-    public async findUserInNavbar(expectedName: string): Promise<void> {
+    public async getUserNameFromNavbar(): Promise<string> {
         await this.navbarDropdown.waitFor({ state: "visible", timeout: 5000 });
-        const navbarText = await this.navbarDropdown.textContent();
-
-        if (!navbarText || !navbarText.includes(expectedName)) {
-            throw new Error(`User name "${expectedName}" was not found in the navbar.`);
-        };
+        return (await this.navbarDropdown.textContent())?.trim() ?? '';
     };
 };

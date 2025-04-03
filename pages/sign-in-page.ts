@@ -22,7 +22,8 @@ export class SignInPage extends BasePage {
 
     @step('Checking if username "{expectedName}" is present in the navbar')
     public async checkUserNameInNavbar(expectedName: string): Promise<void> {
-        await this.signInModal.findUserInNavbar(expectedName);
+        const actualName = await this.signInModal.getUserNameFromNavbar();
+        expect(actualName).toBe(expectedName);
     };
 
     @step('Verifying sign-in error message "{expectedMessage}"')
